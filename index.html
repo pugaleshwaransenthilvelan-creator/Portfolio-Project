@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pugaleshwaran | Portfolio</title>
+  <meta name="description" content="Portfolio of Pugaleshwaran, BE CSE student at Sathyabama Institute of Science and Technology." />
+
+  <!-- Google Font (falls back to system fonts if offline) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Apply saved theme BEFORE the page paints, so there is no white flash in dark mode -->
+  <script>
+    document.documentElement.setAttribute("data-theme", localStorage.getItem("theme") || "light");
+  </script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ================= NAVIGATION BAR ================= -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="logo">Pugal<span>.</span></a>
+
+      <nav id="nav-menu" class="nav-menu" aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#resume" class="nav-link">Resume</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Light / Dark toggle -->
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle light and dark theme">
+          <span id="theme-icon">🌙</span>
+        </button>
+        <!-- Hamburger (visible only on mobile) -->
+        <button id="menu-toggle" class="icon-btn menu-btn" aria-label="Open menu" aria-expanded="false">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ================= HOME / HERO ================= -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="hero-hello">Hi, I'm</p>
+          <h1 class="hero-name">Pugaleshwaran</h1>
+          <h2 class="hero-role">BE CSE Student · <span id="typing"></span><span class="cursor">|</span></h2>
+          <p class="hero-desc">
+            I am a second-year Computer Science and Engineering student who enjoys turning
+            ideas into working programs. I am learning web development and problem solving
+            every day.
+          </p>
+          <p class="hero-objective">
+            <strong>Career objective:</strong> to become a skilled software developer who builds
+            useful, reliable and user-friendly applications.
+          </p>
+          <div class="hero-buttons">
+            <a href="#resume" class="btn btn-primary">View Resume</a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <div class="avatar" aria-label="Profile photo">
+            <span class="avatar-initial">P</span>
+            <!-- Put your photo at assets/profile.jpg. If the file is missing, the letter above is shown. -->
+            <img src="assets/profile.jpg" alt="Pugaleshwaran profile photo" onerror="this.style.display='none'" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-sub">A quick look at who I am and where I'm headed.</p>
+
+        <div class="grid grid-2">
+          <article class="card reveal">
+            <h3>Introduction</h3>
+            <p>
+              I'm Pugaleshwaran, a curious and hard-working student who likes understanding how
+              software works from the inside. I enjoy writing clean code and learning by building
+              small projects.
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <h3>Education</h3>
+            <p>
+              Pursuing BE Computer Science and Engineering at Sathyabama Institute of Science and
+              Technology, Chennai.
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <h3>Interests</h3>
+            <p>Web development, problem solving, data structures, and exploring new technologies.</p>
+          </article>
+
+          <article class="card reveal">
+            <h3>Programming Interests</h3>
+            <p>C, C++, Java, Python and modern web development with JavaScript and React.</p>
+          </article>
+
+          <article class="card card-wide reveal">
+            <h3>Career Goal</h3>
+            <p>
+              To grow into a full-stack developer, contribute to real-world projects, and keep
+              improving my skills through internships and open-source work.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <p class="section-sub">Technologies I work with. The bars show my current comfort level.</p>
+
+        <div class="grid grid-3" id="skills-grid">
+          <!-- data-level controls the width of the progress bar -->
+          <article class="card skill reveal" data-level="80">
+            <div class="skill-head"><h3>C</h3><span>80%</span></div>
+            <div class="progress"><div class="progress-fill"></div></div>
+          </article>
+          <article class="card skill reveal" data-level="75">
+            <div class="skill-head"><h3>C++</h3><span>75%</span></div>
+            <div class="progress"><div class="progress-fill"></div></div>
+          </article>
+          <article class="card skill reveal" data-level="70">
+            <div class="skill-head"><h3>Java</h3><span>70%</span></div>
+            <div class="progress"><div class="progress-fill"></div></div>
+          </article>
+          <article class="card skill reveal" data-level="80">
+            <div class="skill-head"><h3>Python</h3><span>80%</span></div>
+            <div class="progress"><div class="progress-fill"></div></div>
+          </article>
+          <article class="card skill reveal" data-level="85">
+            <div class="skill-head"><h3>HTML</h3><span>85%</span></div>
+            <div class="progress"><div class="progress-fill"></div></div>
+          </article>
+          <article class="card skill reveal" data-level="80">
+            <div class="skill-head"><h3>CSS</h3><span>80%</span></div>
+            <div class="progress"><div class="progress-fill"></div></div>
+          </article>
+          <article class="card skill reveal" data-level="70">
+            <div class="skill-head"><h3>JavaScript</h3><span>70%</span></div>
+            <div class="progress"><div class="progress-fill"></div></div>
+          </article>
+          <article class="card skill reveal" data-level="65">
+            <div class="skill-head"><h3>Data Structures</h3><span>65%</span></div>
+            <div class="progress"><div class="progress-fill"></div></div>
+          </article>
+          <article class="card skill reveal" data-level="55">
+            <div class="skill-head"><h3>React</h3><span>55%</span></div>
+            <div class="progress"><div class="progress-fill"></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EDUCATION ================= -->
+    <section id="education" class="section">
+      <div class="container">
+        <h2 class="section-title">Education</h2>
+        <p class="section-sub">My academic journey so far.</p>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="card">
+              <h3>BE Computer Science and Engineering</h3>
+              <p class="muted">Sathyabama Institute of Science and Technology, Chennai</p>
+              <p>2025 – 2029 (currently in 2nd year)</p>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="card">
+              <h3>Higher Secondary (12th)</h3>
+              <p class="muted">Sai ram matrix higher secondary school, Thiruvarur</p>
+              <p>2025 · 92.18%</p>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="card">
+              <h3>Secondary School (10th)</h3>
+              <p class="muted">VS boys higher secondary school, thiruvarur</p>
+              <p>2023 · 83.38%</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section id="projects" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-sub">Sample project.</p>
+
+        <div class="grid grid-3">
+          <article class="card project reveal">
+            <h3>Portfolio Website</h3>
+            <p>A responsive resume website with a contact form that saves messages to Google Sheets.</p>
+            <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+            <div class="project-buttons">
+              <a href="https://github.com/your-username/portfolio-project" target="_blank" rel="noopener" class="btn btn-small btn-outline">GitHub</a>
+              <a href="https://your-username.github.io/portfolio-project/" target="_blank" rel="noopener" class="btn btn-small btn-primary">Demo</a>
+            </div>
+          </article>
+
+          <article class="card project reveal">
+            <h3>React Contact Cards</h3>
+            <p>A single page app where users add, edit and delete contact cards dynamically.</p>
+            <ul class="tags"><li>React</li><li>Vite</li><li>CSS</li></ul>
+            <div class="project-buttons">
+              <a href="https://github.com/your-username/react-contact-cards" target="_blank" rel="noopener" class="btn btn-small btn-outline">GitHub</a>
+              <a href="#" class="btn btn-small btn-primary">Demo</a>
+            </div>
+          </article>
+
+          <article class="card project reveal">
+            <h3>Like / Unlike Cards</h3>
+            <p>Reusable card component where every card remembers its own liked state.</p>
+            <ul class="tags"><li>React</li><li>useState</li></ul>
+            <div class="project-buttons">
+              <a href="https://github.com/your-username/like-cards" target="_blank" rel="noopener" class="btn btn-small btn-outline">GitHub</a>
+              <a href="#" class="btn btn-small btn-primary">Demo</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= RESUME ================= -->
+    <section id="resume" class="section">
+      <div class="container">
+        <h2 class="section-title">Resume</h2>
+        <p class="section-sub">A summary of my profile. Download the full PDF below.</p>
+
+        <div class="grid grid-2">
+          <article class="card reveal">
+            <h3>Career Objective</h3>
+            <p>
+              To secure a software development role where I can apply my programming and web
+              development skills, learn from experienced engineers and grow continuously.
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <h3>Education</h3>
+            <p><strong>BE CSE</strong> – Sathyabama Institute of Science and Technology, Chennai</p>
+          </article>
+
+          <article class="card reveal">
+            <h3>Technical Skills</h3>
+            <p>C, C++, Java, Python, HTML, CSS, JavaScript, Data Structures, React</p>
+          </article>
+
+          <article class="card reveal">
+            <h3>Projects</h3>
+            <ul class="plain-list">
+              <li>Portfolio Website (HTML, CSS, JS, Google Sheets)</li>
+              <li>React Contact Cards</li>
+              <li>Like / Unlike Cards</li>
+            </ul>
+          </article>
+
+          <article class="card card-wide reveal">
+            <h3>Achievements</h3>
+            <ul class="plain-list">
+              <li>Participated in a Hackathon, where I collaborated with a team to develop an innovative solution to a real-world problem and gained valuable experience in problem-solving, teamwork, and technology.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="center">
+          <!-- "download" makes the browser save the file with this name.
+               Put Pugaleshwaran_Resume.pdf in the SAME folder as index.html -->
+          <a href="Pugaleshwaran_Resume.pdf" download="Pugaleshwaran_Resume.pdf" class="btn btn-primary">Download Resume</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Contact Me</h2>
+        <p class="section-sub">Send me a message. It is saved to a Google Sheet.</p>
+
+        <form id="contact-form" class="card form" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your full name" required minlength="2" />
+              <small class="error" id="name-error"></small>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required />
+              <small class="error" id="email-error"></small>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="10-digit mobile number" required pattern="[0-9]{10}" maxlength="10" inputmode="numeric" />
+              <small class="error" id="phone-error"></small>
+            </div>
+            <div class="field">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="What is this about?" required />
+              <small class="error" id="subject-error"></small>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message here" required minlength="5"></textarea>
+            <small class="error" id="message-error"></small>
+          </div>
+
+          <div class="form-buttons">
+            <button type="submit" id="submit-btn" class="btn btn-primary">Send Message</button>
+            <button type="reset" id="reset-btn" class="btn btn-outline">Reset</button>
+          </div>
+
+          <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ================= USER RESPONSES (replaces admin section) ================= -->
+    <section id="responses" class="section">
+      <div class="container">
+        <h2 class="section-title">User Responses</h2>
+        <p class="section-sub">Messages received through the contact form.</p>
+
+        <!-- Login box: visible until the demo login succeeds -->
+        <div id="login-box" class="card login">
+          <h3>Admin Login (Demo)</h3>
+          <p class="note">
+            Demo only. A password written in frontend JavaScript can be read by anyone using
+            browser developer tools, so this is <strong>not secure</strong> for real applications.
+          </p>
+          <form id="login-form" novalidate>
+            <div class="field">
+              <label for="username">Username</label>
+              <input type="text" id="username" autocomplete="username" placeholder="admin" required />
+            </div>
+            <div class="field">
+              <label for="password">Password</label>
+              <input type="password" id="password" autocomplete="current-password" placeholder="Password" required />
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+            <p id="login-error" class="error"></p>
+          </form>
+        </div>
+
+        <!-- Responses panel: hidden until login succeeds -->
+        <div id="responses-panel" class="hidden">
+          <div class="responses-toolbar">
+            <button id="refresh-btn" class="btn btn-small btn-outline">Refresh</button>
+            <button id="logout-btn" class="btn btn-small btn-primary">Logout</button>
+          </div>
+          <p id="responses-status" class="form-status"></p>
+          <div id="responses-list" class="grid grid-2"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Pugaleshwaran. Built with HTML, CSS, JavaScript and Google Sheets.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
